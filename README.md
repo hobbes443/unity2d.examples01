@@ -14,4 +14,5 @@ For memories sake.
 - 05 procedurally create a hex grid from the created hex mesh from 04
 - 06 starting with the grid from 03 (modified), highlight multiple hexes based on mouse position
 - 07 try out an MVC pattern I found on the nets
+- 08 playing with delegates and events. play extended to some dumb stuff, but wanted to see if i could do it. mainly making a toggle effect
 - 99 catch all. things tried and failed, or ultimately not used but I might want to reference again
