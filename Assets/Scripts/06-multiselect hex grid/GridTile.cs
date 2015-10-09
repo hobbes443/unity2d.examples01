@@ -21,9 +21,7 @@ public class GridTile : MonoBehaviour {
 		
 		if (GameObject.Find("HexagonGrid") != null) {
 			gridMap = GameObject.Find("HexagonGrid").GetComponent<GridMap>();
-		}
-		
-			
+		}	
 	}
 
 	void OnMouseOver() {
@@ -50,10 +48,6 @@ public class GridTile : MonoBehaviour {
 	void Update() {
 		SetVisual();
 	}
-	
-	void OnCollisionEnter(Collision collision) {
-		Debug.Log("yo collision in gridtile??");
-	}
 
 	void Updatetest () {
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);		
@@ -75,11 +69,6 @@ public class GridTile : MonoBehaviour {
 		SetVisual();
 		
 	}
-	
-	public void Test() {
-		//Debug.Log("from tile test: " + myGridPosition.ToString());
-	}
-	
 	
 	public void SetVisual() {
 		//if (gridMap.GetAdjacent(new Vector2(2,3)) != null) Debug.Log("made it");

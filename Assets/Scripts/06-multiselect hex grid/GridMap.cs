@@ -73,55 +73,11 @@ public class GridMap : MonoBehaviour {
         }          
         return Adjacents;
     }
-    
-       
-    public void Test(Vector2 pPosition) {
-        int x = (int)pPosition.x;
-        int y = (int)pPosition.y;
-        int w = gridWidthInHexes - 1;
-        int h = gridHeightInHexes - 1;
-        
-        
-        //if ((x > 0 && y > 0) && (x < w & y < h)) {
-        //if (x > 0) {
-        //    SpriteRenderer sr = hexes[x-1,y].GetComponent<SpriteRenderer>();      
-        //    GridTile gt = hexes[x-1,y].GetComponent<GridTile>();
-        //    gt.SetVisual(sr, true);      
-        //}
-        if (x < w) {
-            GridTile gt = hexes[x+1,y].GetComponent<GridTile>();
-            gt.IsSelected = true;
-            gt.SetVisual();
-        }        
-        
-        
-        
-        return;
-        if (hexes[x-1,y]) {
-            Debug.Log("HERE???");
-            if (hexes[x-1,y].GetComponent<GridTile>()) { 
-                
-                //if (x >= 0 && y >= 0 && x < w && y < h) {
-                    
-                
-                
-                SpriteRenderer sr = hexes[x-1,y].GetComponent<SpriteRenderer>();
-                GridTile gt = hexes[x-1,y].GetComponent<GridTile>();
-                gt.Test();
-                gt.SetVisual();
-                
-                //Debug.Log("gridtiles");  
-            }
-        }
-                
-        Debug.Log("from map test: " + pPosition.ToString());
-    }
-    
+  
 
     void CreateHexGrid() {
         hexes = new GameObject[gridWidthInHexes, gridHeightInHexes];
-        
-        
+
         //Loop for Hex Rows
         for (int y = 0; y < gridHeightInHexes; y++)
         {
